@@ -86,9 +86,8 @@ if __name__ == "__main__":
     # commons
     emailId = "grthayalan18@gmail.com"
     password = "1018@thayalan"
-    noOfThreads = 10
+    noOfThreads = 20
     threadPossiblitiesArr = []
-    # global codeFound, code
 
     # generating keywords
     ran = [i for i in range(10)]
@@ -101,6 +100,7 @@ if __name__ == "__main__":
     threadPossiblitiesArr = np.array_split(possiblities, noOfThreads)
     threads = []
     # threading
+    
     print("Bruteforcing with threading...")
     for i in range(noOfThreads):
         threads.append(Thread(target=hack_access_code, args=(
